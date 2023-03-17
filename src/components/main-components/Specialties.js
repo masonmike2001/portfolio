@@ -6,7 +6,11 @@ class Specialties extends Component {
     super();
   }
   render() {
-    return <div></div>;
+    return (
+      <div>
+        <h1>Specialties:</h1>
+      </div>
+    );
   }
 }
 export default Specialties;
