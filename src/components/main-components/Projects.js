@@ -6,7 +6,11 @@ class Projects extends Component {
     super();
   }
   render() {
-    return <div></div>;
+    return (
+      <div>
+        <h1>Projects</h1>
+      </div>
+    );
   }
 }
 export default Projects;

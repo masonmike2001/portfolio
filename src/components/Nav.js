@@ -4,6 +4,30 @@ class Nav extends Component {
   constructor() {
     super();
   }
+
+  linkHandler = (e) => {
+    switch (e.target.textContent) {
+      // case "ABOUT":
+      //   window.location.href = "#about";
+      //   break;
+
+      // case "SPECIALTIES":
+      //   window.location.href = "https://www.linkedin.com/in/masonmike2001/";
+      //   break;
+      // case "PROJECTS":
+      //   window.location.href = "https://www.linkedin.com/in/masonmike2001/";
+      //   break;
+      case "LINKEDIN":
+        window.location.href = "https://www.linkedin.com/in/masonmike2001/";
+        break;
+      case "GITHUB":
+        window.location.href = "https://github.com/masonmike2001";
+        break;
+      default:
+        break;
+    }
+  };
+
   render() {
     return (
       <div id="nav-menu">
@@ -13,15 +37,16 @@ class Nav extends Component {
             src="https://avatars.githubusercontent.com/u/56095222?v=4"
           />
           <h1>Michael Mason</h1>
-          <p id="headline">
-            Let's bridge the gap between technology and health.
-          </p>
         </div>
-        <button>ABOUT</button>
-        <button>SPECIALTIES</button>
-        <button>PROJECTS</button>
-        <button class="btn-blue">LINKEDIN</button>
-        <button class="btn-bw">GITHUB</button>
+        <a href="#about">ABOUT</a>
+        <a href="#specialties">SPECIALTIES</a>
+        {/* <button onClick={this.linkHandler}>PROJECTS</button> */}
+        <button className="btn-blue" onClick={this.linkHandler}>
+          LINKEDIN
+        </button>
+        <button className="btn-bw" onClick={this.linkHandler}>
+          GITHUB
+        </button>
       </div>
     );
   }

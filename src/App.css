@@ -1,6 +1,14 @@
 html, button {
-  background-color: #282c34;
+  background-color: #171a1f;
   color: aliceblue;
+  scroll-behavior: smooth;
+
+
+}
+
+html {
+    padding: 0 !important;
+    height: 100vh;
 }
 
 .App {
@@ -53,4 +61,9 @@ button:hover {
 #app {
   display: grid;
   grid-template: 1fr / 1fr 2.5fr;
+}
+
+#main-flow {
+  display: flex;
+  flex-direction: column;
 }

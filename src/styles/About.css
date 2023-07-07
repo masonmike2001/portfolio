@@ -1,0 +1,29 @@
+#about {
+
+    height: calc(100vh - 150px);
+    background-image: url('./assets/galaxy.jpg');
+    background-size: cover;
+    padding: 90px;
+    padding-top: 240px;
+    min-width: 700px;
+}
+
+#about>p {
+    font-size: 1.3rem;
+    line-height: 30px;
+    margin-top: 40px;
+}
+
+
+#about>hr {
+    color: white;
+    margin-bottom: 40px;
+}
+
+#scroll {
+    filter: invert(1);
+    position: fixed;
+    margin: auto;
+    bottom: 5%;
+    left: 63%;
+}

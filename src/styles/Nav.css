@@ -1,16 +1,25 @@
 #nav-menu {
     display: grid;
-    grid-template: 3fr repeat(5, 1fr)/ 1fr;
+    grid-template: 1fr repeat(5, 1.3fr)/ 1fr;
+    height: 43%;
+    position: sticky;
+    top: 0;
+    padding: 30px;
+}
 
+#nav-menu>* {
+  
 }
 
 .badge {
+    background: linear-gradient(rgba(58, 45, 58, 0.15), rgb(76, 0, 255, 0.15));
+    border: rgb(76, 0, 255) solid 1px;
     display: grid;
-    grid-template: 3fr 2fr 1fr/ 1fr 4fr ;
-    border: grey solid 2px;
+    grid-template: 3fr/ 1fr 5fr ;
+
     border-radius: 15px;
     margin: 10px;
-    padding: 20px;
+    padding: 20px 25px;
     text-align: center;
     min-width: 370px;
 }
@@ -20,29 +29,39 @@
 }
 
 .avatar {
-    width: 150px;
+    width: 130px;
+    /* border: rgb(255, 255, 255) solid 2px; */
+    border-radius: 232px;
 }
 
-#headline {
-    grid-row: 2;
-    grid-column: 2;
-} 
 
-
-#nav-menu>button {
+#nav-menu>button, #nav-menu>a {
     margin: auto;
     border: none;
-    background-color: rgba(240, 248, 255, 0.18);
+    text-align: center;
+    color: white;
+    text-decoration: none;
+
     border-radius: 10px;
-    padding: 10px;
-    width: 60%;
+    height: 50px;
+    width: 250px;
+    border: rgb(255, 255, 255) solid .5px;
+    font-size: 0.9rem;
 }
 
+#nav-menu>button {
+
+}
+
+#nav-menu>a {
+    line-height:47px;
+}
 .badge:hover {
     background-color: rgba(240, 255, 255, 0.188);
 }
-.badge>img {
-    grid-row: 1/ span 3;
+
+button:hover, a:hover {
+    background-color: rgb(76, 0, 255) !important;
 }
 
 .btn-blue {

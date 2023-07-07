@@ -13,7 +13,7 @@ class Main extends Component {
       <div id="main-flow">
         <About />
         <Specialties />
-        <Projects />
+        {/* <Projects /> */}
       </div>
     );
   }

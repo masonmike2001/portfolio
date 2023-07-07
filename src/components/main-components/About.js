@@ -9,32 +9,23 @@ class About extends Component {
   render() {
     return (
       <div id="about">
-        <h1>About Me:</h1>
-        <hr></hr>
-        <pre>
-          <code>~ % Hello, World. </code>
-        </pre>
+        <h1>
+          Hello, World. My name is <b>Michael.</b>
+        </h1>
         <p>
-          My name is <b>Michael.</b>
-        </p>
-        <p>
-          Ever since I booted up my first computer in 2006 I've loved learning
+          Ever since I booted up my first computer back in 2006, I've loved learning
           about anything and everything technology-related. I develop sites and
-          apps in my spare time, and am well experienced with
+          apps in my spare time, and am experienced with
           <b> Javascript</b> and <b>ReactJS</b>.
         </p>
         <p>
           In the summer of 2023, I received my <b>CompTIA A+ certification</b>.
-          With it, I've garnered a better understanding of all the components
-          involved in making the web work.
+          With it, I've learned  about many of the components that make the web work. I'm currently studying for the CompTIA Network+ certification, and I practice with network creation and Active Domain systems with virtual machines. In the near feature I hope to learn about cybersecurity and threat management.
         </p>
         <p>
-          With experiences in the medical field, both as an EMT and through the
-          study of Clinical Exercise Science, it brings me great joy to use my
-          love for technology to help others of all types of backgrounds live
-          happier lives.
+          Feel free to browse my GitHub, and connect with LinkedIn. I look forward to working with you.
         </p>
-        <img id="scroll" src={scroll}></img>
+        {/* <img id="scroll" src={scroll}></img> */}
       </div>
     );
   }
