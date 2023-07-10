@@ -16,17 +16,17 @@ class Specialties extends Component {
         <div>
 
           <div>
-            <img src={aPlus} width="100" height="100"></img>
+            <img src={aPlus}></img>
             <h2>IT</h2>
             <p>CompTIA A+ certified, currently studying for the CompTIA Network+</p>
           </div>
           <div>
-            <img src={web} width="100" height="100"></img>
+            <img src={web}></img>
             <h2>Web Development</h2>
             <p>Experienced in creating Javascript-heavy sites that use React</p>
           </div>
           <div>
-            <img src={health} width="100" height="100"></img>
+            <img src={health}></img>
             <h2>Health</h2>
             <p>
               B.S. in Exercise Science with experience working as an

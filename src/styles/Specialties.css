@@ -1,3 +1,33 @@
+@media screen and (max-width: 480px) {
+
+    img {
+        max-width: 10%;
+        max-height: 10%;
+      }
+}
+
+#specialties {
+    margin: auto;
+    width: 100%;
+}
+#specialties>h1{
+font-size: 3vw;
+}
+
 #specialties>hr{
-    margin-bottom: 40px;
+    margin-bottom: 5%;
+    width: 20%;
+}
+
+#specialties>div>div>h2{
+    font-size: 2vw;
+}
+
+#specialties>div>div>img{
+    width:  15%;
+    height: 15%;
+}
+
+#specialties>div>div>p{
+    font-size: 1.4vw;
 }

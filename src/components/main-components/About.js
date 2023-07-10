@@ -20,10 +20,10 @@ class About extends Component {
         </p>
         <p>
           In the summer of 2023, I received my <b>CompTIA A+ certification</b>.
-          With it, I've learned  about many of the components that make the web work. I'm currently studying for the CompTIA Network+ certification, and I practice with network creation and Active Domain systems with virtual machines. In the near feature I hope to learn about cybersecurity and threat management.
+          With it, I've learned about many of the components that make the web work. I'm currently studying for the CompTIA Network+ certification, and I practice with network creation and Active Domain systems with virtual machines. In the near feature I hope to learn about cybersecurity and threat management.
         </p>
         <p>
-          Feel free to browse my GitHub, and connect with LinkedIn. I look forward to working with you.
+          Feel free to browse my GitHub, and connect with me on LinkedIn. I look forward to working with you.
         </p>
         {/* <img id="scroll" src={scroll}></img> */}
       </div>

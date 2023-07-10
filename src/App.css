@@ -5,10 +5,15 @@ html, button {
 
 
 }
-
+html, body {
+  overflow-x: hidden;
+}
+body {
+  position: relative
+}
 html {
     padding: 0 !important;
-    height: 100vh;
+
 }
 
 .App {
@@ -50,9 +55,7 @@ html {
   }
 }
 
-html {
-  padding: 10px;
-}
+
 
 button:hover {
   cursor: pointer;

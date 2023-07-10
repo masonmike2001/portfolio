@@ -1,37 +1,41 @@
+
 #nav-menu {
     display: grid;
-    grid-template: 1fr repeat(5, 1.3fr)/ 1fr;
-    height: 43%;
+    grid-template: 1fr repeat(5, 1fr)/ 1fr;
+    height: 30%;
+    width: 25vw;
     position: sticky;
     top: 0;
-    padding: 30px;
+    padding: 6%;
 }
 
-#nav-menu>* {
-  
-}
+
+/*
+10px = 2%
+*/
 
 .badge {
     background: linear-gradient(rgba(58, 45, 58, 0.15), rgb(76, 0, 255, 0.15));
     border: rgb(76, 0, 255) solid 1px;
     display: grid;
-    grid-template: 3fr/ 1fr 5fr ;
-
-    border-radius: 15px;
-    margin: 10px;
-    padding: 20px 25px;
+    grid-template: 3fr/ 1fr 3fr ;
+    width: 60%;
+    border-radius: 2.5%;
+    margin: auto;
+    padding: 3%;
     text-align: center;
-    min-width: 370px;
+
 }
 
 .badge>* {
     margin: auto;
+    font-size: 1.9vw;
 }
 
 .avatar {
-    width: 130px;
+    width: 125%;
     /* border: rgb(255, 255, 255) solid 2px; */
-    border-radius: 232px;
+    border-radius: 46.4%;
 }
 
 
@@ -43,18 +47,15 @@
     text-decoration: none;
 
     border-radius: 10px;
-    height: 50px;
-    width: 250px;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    width: 50%;
     border: rgb(255, 255, 255) solid .5px;
-    font-size: 0.9rem;
-}
-
-#nav-menu>button {
-
+    font-size: 1.0vw;
 }
 
 #nav-menu>a {
-    line-height:47px;
+
 }
 .badge:hover {
     background-color: rgba(240, 255, 255, 0.188);
@@ -70,4 +71,10 @@ button:hover, a:hover {
 
 .btn-bw {
     background-color: black !important;
+}
+
+@media screen and (max-width: 480px) {
+    #nav-menu {
+      display: none; /* The width is 100%, when the viewport is 800px or smaller */
+    }
 }
