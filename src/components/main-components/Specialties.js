@@ -23,7 +23,7 @@ class Specialties extends Component {
           <div>
             <img src={web}></img>
             <h2>Web Development</h2>
-            <p>Experienced in creating Javascript-heavy sites that use React</p>
+            <p>Experienced in creating responsive, Javascript-heavy sites that utilize React</p>
           </div>
           <div>
             <img src={health}></img>

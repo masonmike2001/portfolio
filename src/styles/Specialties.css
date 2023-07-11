@@ -1,10 +1,4 @@
-@media screen and (max-width: 480px) {
 
-    img {
-        max-width: 10%;
-        max-height: 10%;
-      }
-}
 
 #specialties {
     margin: auto;
@@ -30,4 +24,27 @@ font-size: 3vw;
 
 #specialties>div>div>p{
     font-size: 1.4vw;
+}
+
+#specialties>div>div {
+    margin-bottom: 10%;
+}
+
+@media screen and (max-width: 480px) {
+
+    img {
+        max-width: 10%;
+        max-height: 10%;
+      }
+    #specialties>h1 {
+        font-size: 3.9vw;
+    }
+    #specialties>div>div>p{
+        font-size: 2.4vw;
+    }
+    #specialties>div>div>h2{
+        font-size: 4vw;
+    }
+    
+
 }

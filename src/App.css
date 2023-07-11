@@ -4,13 +4,23 @@ html, button {
   scroll-behavior: smooth;
 
 
+
 }
+
+
+
+
+/* The two lines below prevent side scrolling on mobile view */
 html, body {
   overflow-x: hidden;
 }
 body {
   position: relative
 }
+
+
+
+
 html {
     padding: 0 !important;
 

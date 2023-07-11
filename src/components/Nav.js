@@ -38,7 +38,7 @@ class Nav extends Component {
           />
           <h1>Michael Mason</h1>
         </div>
-        <a href="#about">ABOUT</a>
+        <a href="">ABOUT</a>
         <a href="#specialties">SPECIALTIES</a>
         {/* <button onClick={this.linkHandler}>PROJECTS</button> */}
         <button className="btn-blue" onClick={this.linkHandler}>
