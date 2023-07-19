@@ -2,10 +2,10 @@
 
 #about {
 
-    height: 95vh;
+    height: 100vh;
     background-image: url('./assets/galaxy.jpg') !important;
     background-size: cover;
-    padding: 5%;
+    padding-bottom: 5%;
     padding-top: 4%;
     width: 70vw;
     margin: 0;

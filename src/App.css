@@ -12,7 +12,7 @@ html, button {
 
 /* The two lines below prevent side scrolling on mobile view */
 html, body {
-  overflow-x: hidden;
+  overflow-x: visible;
 }
 body {
   position: relative
