@@ -6,53 +6,78 @@ html{
 body {
     margin: 0;
     color: #ffffff;
-    width: 100vw;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
+#main {
+    width: 100%;
+
+}
 @media screen and (max-width: 320px) {
   /* comes into effect for screens less than or equal to 320 pixels */
   #nav-title {
-    font-size: 100%;
+    font-size: 80%;
       margin-top: 20%;
   }
+  #idcard>h1 {
+    font-size: 140%;
+  }
   .clipart {
-    width: 27%;
+    /*width: 27%;*/
   }
   #nav-work, #nav-bio {
-    font-size: 50%;
-      margin-right: 10px;
+    font-size: 60%;
+
   }
+
+  .bio-list>ul>li {
+
+      margin-left: -30px;
+  }
+
 .navbar {
     display: grid;
-    grid-template:  30% / 25% 25% 25% 25%;
-    padding-top: 1%;
+    grid-template:  30% / 20% 5% 25% 25%;
+    padding: 20px 0 0 0 ;
+
 }
   .head-pic {
-    width: 50%;
+    width: 60%;
     margin-top: 10%;
   }
   #main-grid {
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
   }
-  hr {
-    display: none;
-    margin-top: 8%;
-    margin-bottom: -3%;
+
   }
   h3 {
-    font-size: 60%;
+    font-size: 100%;
     text-align: center;
     margin: auto;
     margin-bottom: 2%;
     width: 60%;
+
   }
   .header {
-    font-size: 100%;
-    margin: 10px 0 10px 0;
+    margin-top: 10px;
+  }
+  
+  .headline {
+margin: 20px;
+  }
+
+  #idcard {
+    padding: 10px;
+      width: 80%;
   }
   h4 {
-    font-size: 60%;
+    font-size: 100%;
     text-align: center;
     margin: auto;
     margin-bottom: 2%;
@@ -78,14 +103,15 @@ body {
   }
   .bio-list>* {
     font-size: 140%;
-    margin: 4%;
-    text-align: center;
+
+    text-align: left;
     list-style-type: none;
+     margin-left: -20px;
   }
     .project-box {
     margin-left: 5%;
     padding-left: 50px;
-        width: 100%;
+    width: 80%;
     /*padding: 20px;*/
   }
 }
@@ -96,9 +122,13 @@ body {
     grid-template:  40% / 35% 45% 10% 10% ;
     padding-top: 4%;
     font-size: 65%;
-    margin-bottom: 5%;
+
 
   }
+
+    .c2a {
+    font-size: 100%;
+}
   #nav-title {
     font-size: 120%;
   }
@@ -115,15 +145,12 @@ body {
     display: flex;
     flex-direction: column;
     margin-top: 8%;
+
 }
   }
-  hr {
-    /* display: none; */
-    margin-top: 8%;
-    margin-bottom: -3%;
-  }
+
   h3 {
-    font-size: 100%;
+    /*font-size: 100%;*/
     text-align: center; 
     margin-bottom: 2%;
   }
@@ -136,7 +163,7 @@ body {
   .project-box {
     margin-left: 5%;
     padding-left: 5%;
-    padding: 20px;
+
   }
   .project-box>h2 {
     font-size: 90%;
@@ -159,22 +186,25 @@ body {
   .bio-list>* {
     font-size: 70%;
     margin-left: -4%;
-    text-align: left;
+    text-align: center;
   }
   .clipart {
     width: 40%;
-    padding: 15px;
+
   }
   .showcase {
-    width: 80%;
+    width: 100%;
   }
 
 @media screen and (min-width: 550px) {
   /* comes into effect for screens larger than or equal to 481 pixels */
   #main-grid {
     display: grid;
-    grid-template: 70% / 400px 400px;
-    margin-top: 150px;
+    grid-template: 80% / 400px 400px;
+
+      align-self: center;
+      justify-self: center;
+
   }
 
   .navbar {
@@ -184,10 +214,11 @@ body {
     padding-top: 1%;
       justify-content: center;
     align-items: center;
-      position: fixed;
+
     left: 0;
     top: 0;
     width: 100%;
+      /*margin-bottom: 10px;*/
   }
 
   #nav-title {
@@ -226,7 +257,7 @@ body {
     margin-right: 20%;
   }
   .project-box>ul>li {
-    font-size: 100%;
+    font-size: 70%;
     text-align: left;
   }
   .bio>* {
@@ -239,19 +270,22 @@ body {
   .bio-list {
     display: flex;
     flex-direction: row;
+
   }
   .bio-list>* {
-    font-size: 80%;
-    margin-left: 4%;
-    text-align: left;
+    font-size: 50%;
+
+      text-align: center;
+
   }
   .year {
     font-size: 140%;
     margin-bottom: 4%;
   }
   .showcase {
-    width: 17%;
+    width: 50%;
     border-radius: 1%;
+      margin: auto;
   }
   .clipart {
     width: 10%;
@@ -266,7 +300,7 @@ body {
     margin-bottom: 15px;
     justify-content: center;
     align-items: center;
-      position: fixed;
+
     left: 0;
     top: 0;
     width: 100%;
@@ -292,17 +326,14 @@ body {
   }
 }
 
-.bio>hr {
-    padding-top: 0 !important;
-    margin: 20px auto auto auto;
-    width: 20%;
-}
+
+
 .button-grid {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 5%;
+    gap: 15%;
 }
 
 a {
@@ -327,22 +358,27 @@ a:not(#nav-title):hover{
     grid-column: 1;
 }
 
+.main_grid {
+        justify-items: center;
+    align-items: center;
+    margin: auto;
+}
 #nav-work {
     grid-column: 3;
-    font-size: 80%;
+    /*font-size: 80%;*/
 }
 
 #nav-bio {
     grid-column: 4;
-    font-size: 80%;
+    /*font-size: 80%;*/
 }
 
 .header {
-  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+    margin-top: 40px;
 }
 
 .footer {
@@ -353,6 +389,7 @@ a:not(#nav-title):hover{
   width: 100%;
   color: white;
   text-align: center;
+
 }
 
 .head-pic {
@@ -374,7 +411,18 @@ a:not(#nav-title):hover{
 }
 
 hr {
-  color: #22fff061;
+  border-top: 1px dashed #03f2ff;
+    border-right: none;
+    border-left: none;
+    border-bottom: none;
+    margin: 2px;
+}
+
+.bio>h1 {
+    background-color: #333333;
+    margin: auto;
+    width: 50%;
+    margin-top: 10px;
 }
 
 .centered {
@@ -432,15 +480,20 @@ button:hover {
 
 /* Portfolio */
 .project-box {
-  width: 90%;
+  /*width: 100%;*/
   /*border-left: 1px solid #22fff0;*/
   border-radius: 2%;
   display: grid;
-  grid-template: 20% 90% / 30% 70%;
+  /*grid-template: 30% 70% / 60% 90%;*/
   background-color: #333333;
-    padding: 10px;
+  padding: 10px;
 }
 
+
+.year {
+    font-size: 100%;
+
+}
 .project-box>h2 {
   grid-column: 1;
   grid-row: 1;
@@ -458,6 +511,7 @@ button:hover {
   grid-row: 1;
   margin: auto;
   gap: 5%;
+
 }
 
 .button-row>img {
@@ -472,6 +526,11 @@ button:hover {
   margin: auto;
 }
 
+ul {
+     list-style-type: none;
+}
+
+
 .project-box>ul {
   grid-column: 2;
   grid-row: 2;
@@ -480,22 +539,39 @@ button:hover {
 .bio-list {
   display: flex;
   justify-content: center;
-  margin: auto;
-  margin-top: 2%;
-  padding: 0 12% 0 12%;
-  background-color: rgba(40, 186, 178, 0.69);
+    padding-bottom: 20px;
 
+
+width: 100%;
+
+
+  background-color: rgba(53, 236, 227, 0.69);
+
+}
+.bio-list>ul>h4 {
+    color: #ffffff;
+    width: 100%
+}
+
+.bio-list>ul>li {
+
+
+    text-align: center;
+    margin-bottom: 7px;
+}
+
+.bio-list>ul {
+    width: 100%;
 
 }
 
 
 #idcard {
     background-color: #333333;
-  padding-bottom: 10%;
-margin-top: 10%;
-  border-radius: 10%;
+  border-radius: 5%;
+    width: 70%;
+margin: auto;
 }
-
 
 
 
@@ -503,6 +579,7 @@ margin-top: 10%;
   /* border: #45aba4af solid 2px ; */
   padding: 0;
   margin-top: 2%;
+
 }
 
 span {
@@ -515,6 +592,23 @@ span {
 
 .year {
   padding-right: 30px;
+}
+
+#three-row {
+ display: flex;
+    flex-direction: row;
+    width: 100%;
+    background-color: #333333;
+}
+
+.bio-list{
+     display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+#main {
+    width: 100%;
+
 }
 
 /* Fonts:   */
