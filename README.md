@@ -1,14 +1,14 @@
 
 # Portfolio Site
 
-A portfolio site to host all my projects, display my contact information and credentials. The site was built using Flask for the framework. Microsoft Azure is used for hosting, and the project integrates Github Actions to redeploy on push.
+A portfolio site to host all my projects, display my contact information and credentials. The site was built using Flask for the framework. PythonAnywhere is used for hosting.
 
 
 ## Features
-
-- Contact info
+- Homepage
 - Project list
-- Azure container
+- Bio
+
 
 
 ## Deployment

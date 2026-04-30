@@ -1,6 +1,7 @@
 html{
     background-color: #202020;
     scroll-behavior: smooth;
+    box-sizing: border-box;
 }
 
 body {
@@ -9,6 +10,7 @@ body {
     width: 100%;
     display: flex;
     flex-direction: column;
+    
 }
 
 #main {
@@ -19,7 +21,7 @@ body {
   /* comes into effect for screens less than or equal to 320 pixels */
   #nav-title {
     font-size: 80%;
-      margin-top: 20%;
+
   }
   #idcard>h1 {
     font-size: 140%;
@@ -38,9 +40,11 @@ body {
   }
 
 .navbar {
+    padding-top: 5%;
     display: grid;
-    grid-template:  30% / 20% 5% 25% 25%;
-    padding: 20px 0 0 0 ;
+    width: 100%;
+    grid-template:  20% / 30% 15% 15% 15%;
+    /* padding: 20px 0 0 0 ; */
 
 }
   .head-pic {
@@ -114,7 +118,7 @@ margin: 20px;
     width: 80%;
     /*padding: 20px;*/
   }
-}
+
 @media screen and (min-width: 321px) or (max-width: 549px) {
   /* comes into effect for screens between 321 and 549 pixels (inclusive) */
   .navbar {
@@ -210,8 +214,8 @@ margin: 20px;
   .navbar {
     font-size: 100%;
     display: grid;
-    grid-template:  10% / 40% 40% 10% 10%;
-    padding-top: 1%;
+    grid-template:  10% / 40% 40% 5% 5%;
+    padding-top: 20px;
       justify-content: center;
     align-items: center;
 
@@ -257,7 +261,7 @@ margin: 20px;
     margin-right: 20%;
   }
   .project-box>ul>li {
-    font-size: 70%;
+    font-size: 100%;
     text-align: left;
   }
   .bio>* {
@@ -273,7 +277,7 @@ margin: 20px;
 
   }
   .bio-list>* {
-    font-size: 50%;
+    font-size: 90%;
 
       text-align: center;
 
@@ -342,14 +346,15 @@ a {
     max-width: 200px;
     border-radius: 3%;
     transition: 0.3s;
+    padding: 2px;
     text-align: center;
     text-justify: auto;
 }
 
 a:not(#nav-title):hover{
-    background-color: #0098f6af;
+    background-color: #0098f669;
     transition: 0.3s;
-    padding: 20px;
+    /* padding: 5px; */
 
 }
 
@@ -396,7 +401,7 @@ a:not(#nav-title):hover{
   display: flex;
   margin: auto;
   border-radius: 50%;
-  border: 4px inset #22fff0;
+  /* border: 4px inset #22fff0; */
   max-width: 150px;
 }
 
@@ -407,11 +412,11 @@ a:not(#nav-title):hover{
 
 
 .blue {
-  color: #22fff0;
+  color: #5daee1;
 }
 
 hr {
-  border-top: 1px dashed #03f2ff;
+  border-top: 1px dashed #0098f6af;
     border-right: none;
     border-left: none;
     border-bottom: none;
@@ -419,7 +424,7 @@ hr {
 }
 
 .bio>h1 {
-    background-color: #333333;
+    /* background-color: #333333; */
     margin: auto;
     width: 50%;
     margin-top: 10px;
@@ -445,18 +450,18 @@ hr {
 
 
 .vert-button>button {
-  padding: 0 20% 0 20% ;
+  /* padding: 0 10% 0 10% ; */
   height: 40px;
   margin-top: 10px;
 
 
 }
 .vert-button>button:hover {
-  padding: 0 22% 0 22%
+  /* padding: 0 22% 0 22% */
 }
 
 button {
-  background-color: rgba(53, 236, 227, 0.69);
+  background-color: #0098f6af;
   border: none;
   padding: 2%;
   color: white;
@@ -468,9 +473,47 @@ button {
 button:hover {
   background-color: #0098f6af;
   border-radius: 6%;
-    padding: 20px;
+    padding: 10px 0 10px 0;
   transition: 0.3s;
   cursor: pointer;
+}
+
+.skills-container {
+    display: flex;
+    justify-content: space-between; /* Spreads columns evenly */
+    align-items: start;
+    gap: 20px;                     /* Space between columns */
+    padding: 20px;
+    flex-wrap: wrap;               /* Allows wrapping on mobile */
+}
+
+.skill-column {
+    flex: 1;                       /* Makes all columns equal width */
+    min-width: 200px;              /* Prevents columns from getting too squished */
+    /* background-color: #0098f6af;    Optional: Light background for contrast */
+    padding: 5px;
+    /* border-radius: px; */
+}
+
+.skill-column h3 {
+    border-bottom: 2px solid #333;
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+.bio>h1 {
+      border-bottom: 2px solid #333;
+      padding-bottom: 2px;
+      font-size: 150%;
+}
+
+.skill-column ul {
+    list-style-type: none;         /* Removes default bullets */
+    padding: 0;
+}
+
+.skill-column li {
+    margin-bottom: 8px;
 }
 
 /* .resume {
@@ -485,13 +528,13 @@ button:hover {
   border-radius: 2%;
   display: grid;
   /*grid-template: 30% 70% / 60% 90%;*/
-  background-color: #333333;
+  /* background-color: #333333; */
   padding: 10px;
 }
 
 
 .year {
-    font-size: 100%;
+    /* font-size: 100%; */
 
 }
 .project-box>h2 {
@@ -545,7 +588,7 @@ ul {
 width: 100%;
 
 
-  background-color: rgba(53, 236, 227, 0.69);
+  /* background-color: #0098f6af; */
 
 }
 .bio-list>ul>h4 {
@@ -567,7 +610,7 @@ width: 100%;
 
 
 #idcard {
-    background-color: #333333;
+    /* background-color: #333333; */
   border-radius: 5%;
     width: 70%;
 margin: auto;
@@ -598,7 +641,7 @@ span {
  display: flex;
     flex-direction: row;
     width: 100%;
-    background-color: #333333;
+    /* background-color: #333333; */
 }
 
 .bio-list{
