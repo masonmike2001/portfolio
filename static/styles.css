@@ -401,7 +401,7 @@ a:not(#nav-title):hover{
 
 .head-pic {
   display: flex;
-  margin: auto;
+
   border-radius: 50%;
   /* border: 4px inset #22fff0; */
   max-width: 150px;
@@ -423,6 +423,13 @@ hr {
     border-left: none;
     border-bottom: none;
     margin: 2px;
+}
+
+#name {
+  margin: 0;
+}
+#email {
+  margin: 0;
 }
 
 .bio>h1 {
