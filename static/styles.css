@@ -21,6 +21,7 @@ body {
   /* comes into effect for screens less than or equal to 320 pixels */
   #nav-title {
     font-size: 80%;
+    
 
   }
   #idcard>h1 {
@@ -40,10 +41,10 @@ body {
   }
 
 .navbar {
-    padding-top: 5%;
+   
     display: grid;
     width: 100%;
-    grid-template:  20% / 30% 15% 15% 15%;
+    
     /* padding: 20px 0 0 0 ; */
 
 }
@@ -214,8 +215,8 @@ margin: 20px;
   .navbar {
     font-size: 100%;
     display: grid;
-    grid-template:  10% / 40% 40% 5% 5%;
-    padding-top: 20px;
+    /* grid-template:  10% / 40% 40% 5% 5%; */
+    /* padding: 20px 0 20px 0; */
       justify-content: center;
     align-items: center;
 
@@ -300,11 +301,11 @@ margin: 20px;
 .navbar {
     background-color: #333333;
     display: grid;
-    gap: 15px;
-    margin-bottom: 15px;
+    /* gap: 15px; */
+    padding: 0;
+    margin-bottom: 10px;
     justify-content: center;
     align-items: center;
-
     left: 0;
     top: 0;
     width: 100%;
@@ -344,15 +345,16 @@ a {
     text-decoration: none;
     color: #ffffff;
     max-width: 200px;
-    border-radius: 3%;
+    /* border-radius: 3%; */
     transition: 0.3s;
-    padding: 2px;
+    padding: 10px;
+    margin:0;
     text-align: center;
     text-justify: auto;
 }
 
 a:not(#nav-title):hover{
-    background-color: #0098f669;
+    background-color: #83838369;
     transition: 0.3s;
     /* padding: 5px; */
 
@@ -471,9 +473,8 @@ button {
 }
 
 button:hover {
-  background-color: #0098f6af;
+  background-color: #75c6f8af;
   border-radius: 6%;
-    padding: 10px 0 10px 0;
   transition: 0.3s;
   cursor: pointer;
 }
