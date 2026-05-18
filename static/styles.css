@@ -533,16 +533,17 @@ button:hover {
 .project-box {
   /*width: 100%;*/
   /*border-left: 1px solid #22fff0;*/
-  border-radius: 2%;
+  border-radius: 1%;
   display: grid;
   /*grid-template: 30% 70% / 60% 90%;*/
-  /* background-color: #333333; */
+  background-color: #0b0b0b77;
   padding: 10px;
 }
 
 
 .year {
     /* font-size: 100%; */
+    margin-top: 10px;
 
 }
 .project-box>h2 {
