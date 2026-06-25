@@ -15,6 +15,14 @@ def work():
 def bio():
     return render_template("bio.html")
 
+@app.route("/resume")
+def resume():
+    return render_template("resume.html")
+
+@app.route("/contact")
+def contact():
+    return render_template("contact.html")
+
 
 
 

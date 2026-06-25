@@ -150,7 +150,7 @@ margin: 20px;
   #nav-title {
     font-size: 120%;
   }
-  #nav-work, #nav-bio {
+  #nav-work, #nav-bio, #nav-contact, #nav-resume {
     font-size: 70%;
       padding-left: 20%;
   }
@@ -242,7 +242,7 @@ margin: 20px;
   #nav-title {
     font-size: 121%;
   }
-  #nav-work, #nav-bio {
+  #nav-work, #nav-bio, #nav-contact, #nav-resume {
     font-size: 90%;
   }
   .head-pic {
@@ -637,7 +637,11 @@ button:hover {
   gap: 5%;
 
 }
-
+.resume-frame {
+    width: 100%;
+    height: calc(100vh - 180px);
+    border: none;
+}
 .button-row>img {
   margin: auto;
   width: 15%;
@@ -741,69 +745,174 @@ span {
 }
 
 
+
 /* Fonts:   */
-.titillium-web-extralight {
-font-family: "Titillium Web", sans-serif;
-font-weight: 200;
-font-style: normal;
+/*.titillium-web-extralight {*/
+/*font-family: "Titillium Web", sans-serif;*/
+/*font-weight: 200;*/
+/*font-style: normal;*/
+/*}*/
+
+/*.titillium-web-light {*/
+/*font-family: "Titillium Web", sans-serif;*/
+/*font-weight: 300;*/
+/*font-style: normal;*/
+/*}*/
+
+/*.titillium-web-regular {*/
+/*font-family: "Titillium Web", sans-serif;*/
+/*font-weight: 400;*/
+/*font-style: normal;*/
+/*}*/
+
+/*.titillium-web-semibold {*/
+/*font-family: "Titillium Web", sans-serif;*/
+/*font-weight: 600;*/
+/*font-style: normal;*/
+/*}*/
+
+/*.titillium-web-bold {*/
+/*font-family: "Titillium Web", sans-serif;*/
+/*font-weight: 700;*/
+/*font-style: normal;*/
+/*}*/
+
+/*.titillium-web-black {*/
+/*font-family: "Titillium Web", sans-serif;*/
+/*font-weight: 900;*/
+/*font-style: normal;*/
+/*}*/
+
+/*.titillium-web-extralight-italic {*/
+/*font-family: "Titillium Web", sans-serif;*/
+/*font-weight: 200;*/
+/*font-style: italic;*/
+/*}*/
+
+/*.titillium-web-light-italic {*/
+/*font-family: "Titillium Web", sans-serif;*/
+/*font-weight: 300;*/
+/*font-style: italic;*/
+/*}*/
+
+/*.titillium-web-regular-italic {*/
+/*font-family: "Titillium Web", sans-serif;*/
+/*font-weight: 400;*/
+/*font-style: italic;*/
+/*}*/
+
+/*.titillium-web-semibold-italic {*/
+/*font-family: "Titillium Web", sans-serif;*/
+/*font-weight: 600;*/
+/*font-style: italic;*/
+/*}*/
+
+/*.titillium-web-bold-italic {*/
+/*font-family: "Titillium Web", sans-serif;*/
+/*font-weight: 700;*/
+/*font-style: italic;*/
+/*}*/
+
+/* Accent color */
+:root {
+    --accent: #3b82f6;
 }
 
-.titillium-web-light {
-font-family: "Titillium Web", sans-serif;
-font-weight: 300;
-font-style: normal;
+/* Card */
+.contact-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 14px;
+
+    padding: 18px 22px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+    position: relative;
 }
 
-.titillium-web-regular {
-font-family: "Titillium Web", sans-serif;
-font-weight: 400;
-font-style: normal;
+/* subtle highlight layer */
+.contact-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        135deg,
+        rgba(59, 130, 246, 0.08),
+        transparent 60%
+    );
+
+    pointer-events: none;
+    border-radius: inherit;
 }
 
-.titillium-web-semibold {
-font-family: "Titillium Web", sans-serif;
-font-weight: 600;
-font-style: normal;
+/* Section divider */
+.contact-row {
+    padding: 14px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
 
-.titillium-web-bold {
-font-family: "Titillium Web", sans-serif;
-font-weight: 700;
-font-style: normal;
+.contact-row:last-child {
+    border-bottom: none;
 }
 
-.titillium-web-black {
-font-family: "Titillium Web", sans-serif;
-font-weight: 900;
-font-style: normal;
+/* Labels */
+.label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+
+    color: rgba(255, 255, 255, 0.35);
+    margin-bottom: 4px;
 }
 
-.titillium-web-extralight-italic {
-font-family: "Titillium Web", sans-serif;
-font-weight: 200;
-font-style: italic;
+/* Links (default state) */
+.contact-row a {
+    color: #e5e7eb;
+    text-decoration: none;
+    font-size: 1rem;
+
+    transition: 0.18s ease;
 }
 
-.titillium-web-light-italic {
-font-family: "Titillium Web", sans-serif;
-font-weight: 300;
-font-style: italic;
+/* Hover = BLUE accent */
+.contact-row a:hover {
+    color: var(--accent);
+    transform: translateX(3px);
 }
 
-.titillium-web-regular-italic {
-font-family: "Titillium Web", sans-serif;
-font-weight: 400;
-font-style: italic;
+/* Optional subtle glow on hover (very light) */
+.contact-row a:hover {
+    text-shadow: 0 0 10px rgba(59, 130, 246, 0.25);
 }
 
-.titillium-web-semibold-italic {
-font-family: "Titillium Web", sans-serif;
-font-weight: 600;
-font-style: italic;
+/* Footer */
+.contact-footer {
+    margin-top: 14px;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.35);
 }
 
-.titillium-web-bold-italic {
-font-family: "Titillium Web", sans-serif;
-font-weight: 700;
-font-style: italic;
+/* Title accent (optional but nice) */
+.contact-title {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 6px;
+    letter-spacing: -0.02em;
+}
+
+.contact-title::after {
+    content: "";
+    display: block;
+    width: 48px;
+    height: 3px;
+    margin-top: 8px;
+    border-radius: 2px;
+    background: var(--accent);
+    opacity: 0.8;
+}
+
+.underline {
+    text-decoration: underline;
+
 }
