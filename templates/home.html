@@ -2,17 +2,17 @@
 {% block content %}
 <div id="main-grid">
 
-    <div class="centered" id="idcard">
+    <div class="centered>" id="idcard">
 
         <img class="head-pic" src="../static/profile.png" alt="profile-pic">
         <h1 class="titillium-web-regular centered" id="name">Michael Mason</h1>
         <p class="titillium-web-light" id="email">me@mikemason.dev</p>
             <div class="button-grid">
-                <div class="vert-button centered">
+                <div class="vert-button centered btn-primary">
                     <!-- <h3 class="titillium-web-regular c2a">View code:</h3> -->
                     <button class="centered" onclick="window.location.href='https://github.com/masonmike2001'">GitHub</button>
                 </div>
-                <div class="vert-button centered">
+                <div class="vert-button centered btn-primary">
                     
                 <!-- <h3 class="titillium-web-regular c2a">Connect with me:</h3> -->
                 <button class="centered" onclick="window.location.href='https://www.linkedin.com/in/masonmike2001'">LinkedIn</button>
@@ -21,12 +21,137 @@
         
     </div>
     <div class="header centered">
-<!--        <h2 class="titillium-web-regular centered blue">Hello!</h2>-->
+        <h2 class="titillium-web-regular centered blue">Hi, I'm Mike,</h2>
 
-        <h3 class="titillium-web-regular centered headline">Hi, I'm Mike. As a Computer Science graduate with a frontline background in financial services and emergency medicine, I bring a rare combination of technical discipline and deep user empathy to software development.</h3>
-        <h4 class="titillium-web-regular centered headline final">I build clean, efficient systems designed to run seamlessly under pressure. Want to see what I’m building?</h4>
-        <button class="centered" onclick="window.location.href='/portfolio'">Check out my work</button>
+        <h3 class="titillium-web-regular centered headline">Computer Science graduate and software developer with experience in financial services. I build reliable full-stack applications, backend services, and local-first tools designed to perform in real-world environments.</h3>
+
+
+<!--        <button class="centered" onclick="window.location.href='/portfolio'">Resume (add)</button>-->
+    </div>
     </div>
     
 </div>
+<section class="container py-5">
+
+    <!-- Section Title -->
+    <div class="text-center mb-5">
+        <h2 class="fw-bold">Featured Projects</h2>
+        <p class="text-muted">A selection of things I’ve built</p>
+    </div>
+
+    <!-- Project Grid -->
+    <div class="row g-4">
+
+        <!-- Project 1 -->
+                <div class="col-md-6">
+            <div class="card project-card h-100">
+
+<!--                <img src="../static/astrollama.png"-->
+<!--                     class="card-img-top"-->
+<!--                     alt="AstroLlama Screenshot">-->
+
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">AstroLlama</h5>
+                    <div class="mt-2">
+                        <span class="tech-badge">Typescript</span>
+                        <span class="tech-badge">Ollama</span>
+                        <span class="tech-badge">Obsidian API</span>
+                        <span class="tech-badge">LLM</span>
+                    </div>
+                    <p class="card-text text-muted">
+                        Obsidian plugin integrating local LLMs via Ollama for private,
+                        offline AI-assisted knowledge management and markdown generation.
+                    </p>
+
+                    <div class="mt-auto d-flex gap-2">
+                        <a href="https://github.com/masonmike2001/astrollama.git"
+                           class="btn btn-outline-primary btn-sm"
+                           target="_blank">
+                            GitHub
+                        </a>
+
+                        <a href="https://github.com/masonmike2001/astrollama.git"
+                           class="btn btn-primary btn-sm">
+                            View Project →
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="col-md-6">
+            <div class="card project-card h-100">
+
+<!--                <img src="../static/outliner.png"-->
+<!--                     class="card-img-top"-->
+<!--                     alt="Outliner Screenshot">-->
+
+                <div class="card-body d-flex flex-column">
+
+                    <h5 class="card-title">Outliner</h5>
+                    <div class="mt-2">
+                        <span class="tech-badge">Java</span>
+                        <span class="tech-badge">Spring Boot</span>
+                        <span class="tech-badge">PostgreSQL</span>
+                        <span class="tech-badge">Docker/Podman</span>
+                    </div>
+
+                    <p class="card-text text-muted">
+                        Full-stack Spring Boot application for creating,
+                        organizing, and managing structured novel outlines.
+                    </p>
+
+                    <div class="mt-auto d-flex gap-2">
+                        <a href="https://github.com/masonmike2001/novel-outliner.git"
+                           class="btn btn-outline-primary btn-sm"
+                           target="_blank">
+                            GitHub
+                        </a>
+
+                        <a href="https://novel-outliner.onrender.com/"
+                           class="btn btn-primary btn-sm">
+                            View Project →
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+        <button class="centered btn-sm btn-outline-primary" onclick="window.location.href='/portfolio'">All Projects →</button>
+
+    <div class="row text-center py-5">
+
+    <div class="col">
+        <i class="bi bi-cup-hot fs-1"></i>
+        <p>Java</p>
+    </div>
+        <div class="col">
+        <i class="bi bi-cpu fs-1"></i>
+        <p>Python</p>
+    </div>
+
+    <div class="col">
+        <i class="bi bi-database fs-1"></i>
+        <p>PostgreSQL</p>
+    </div>
+
+    <div class="col">
+        <i class="bi bi-box fs-1"></i>
+        <p>Podman</p>
+    </div>
+
+    <div class="col">
+        <i class="bi bi-robot fs-1"></i>
+        <p>Ollama</p>
+    </div>
+
+
+</div>
+
+</section>
+
 {% endblock %}

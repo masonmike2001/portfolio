@@ -1,22 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    >
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link href="/static/styles.css" rel="stylesheet">
     <title>Mike Mason | Portfolio</title>
     <link rel="icon" type="image/x-icon" href="../static/logo.png">
+
 </head>
 <body>
-    <div class="navbar">
-        <a id="nav-title" class="titillium-web-regular " href="/">mikemason<span style="color: #767676;">.dev<span style="color: #03f2ff;" class = "blink" >|</span></span></a>
-        <a id="nav-work" class="titillium-web-regular " href="/portfolio">projects</a>
-        <a id="nav-bio" class="titillium-web-regular " href="/bio">about me</a>
-        <!-- <span style="color: #767676">$</span>  -->
+<nav class="navbar navbar-expand-lg">
+  <div class="container">
+
+    <!-- Left (Brand) -->
+    <a class="titillium-web-regular" href="/">
+      MikeMason<span style="color:#767676;">.dev<span style="color:#03f2ff;" class="blink">|</span></span>
+    </a>
+
+    <!-- Right (Nav links) -->
+    <div class="ms-auto d-flex gap-3">
+
+      <a id="nav-work" class="titillium-web-regular" href="/portfolio">
+        Projects
+      </a>
+
+      <a id="nav-bio" class="titillium-web-regular" href="/bio">
+        About Me
+      </a>
+
     </div>
+
+  </div>
+</nav>
     <div id="main" class="centered">
         {% block content %} 
         {% endblock %} 
@@ -26,5 +49,8 @@
         <a  class="titillium-web-regular " href="/portfolio">Projects</a>
         <a  class="titillium-web-regular " href="/bio">About</a>
     </div> -->
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
+    </script>
 </body>
 </html>
