@@ -1,8 +1,12 @@
-html{
-    /*background-color: #202020;*/
+html {
     scroll-behavior: smooth;
     box-sizing: border-box;
 }
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
 body::before {
     content: "";
     position: fixed;
@@ -15,13 +19,15 @@ body::before {
     pointer-events: none;
     z-index: -1;
 }
+
 body {
     margin: 0;
     color: #ffffff;
     width: 100%;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-        background: linear-gradient(
+    background: linear-gradient(
         180deg,
         #0b1220 0%,
         #0f172a 40%,
@@ -32,211 +38,79 @@ body {
 
 #main {
     width: 100%;
-
 }
+
+/* ==========================================
+   Single-Column Grid Layout Override
+   ========================================== */
+#main-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+/* ==========================================
+   Mobile Breakpoint (<= 320px)
+   ========================================== */
 @media screen and (max-width: 320px) {
-  /* comes into effect for screens less than or equal to 320 pixels */
   #nav-title {
     font-size: 80%;
-    
-
   }
-  #idcard>h1 {
+  #idcard > h1 {
     font-size: 140%;
-  }
-  .clipart {
-    /*width: 27%;*/
   }
   #nav-work, #nav-bio {
     font-size: 60%;
-
   }
-
-
-.navbar {
-   
+  .navbar {
     display: grid;
     width: 100%;
-    
-    /* padding: 20px 0 0 0 ; */
-
-}
+  }
   .head-pic {
     width: 60%;
     margin-top: 10%;
   }
-  #main-grid {
-    display: flex;
-    flex-direction: column;
-      align-items: center;
-      justify-content: center;
+}
 
-  }
-
-  }
-  h3 {
-    font-size: 10px;
-    text-align: center;
-    margin: auto;
-    margin-bottom: 2%;
-    width: 60%;
-
-  }
-  .header {
-    margin-top: 10px;
-  }
-  
-  .headline {
-margin: 20px;
-  }
-
-  #idcard {
-    padding: 10px;
-      width: 80%;
-  }
-  h4 {
-    font-size: 100%;
-    text-align: center;
-    margin: auto;
-    margin-bottom: 2%;
-    width: 70%;
-  }
-  .project-box>h2 {
-    font-size: 90%;
-    margin-right: 20%;
-  }
-  .project-box>ul>li {
-    font-size: 70%;
-    text-align: left;
-  }
-  .bio>* {
-    width: 75%;
-    padding-top: 1%;
-    margin: auto;
-    font-size: 90%;
-  }
-  .bio-list {
-    display: flex;
-    flex-direction: column;
-  }
-  .bio-list>* {
-    font-size: 140%;
-
-    text-align: left;
-    list-style-type: none;
-     margin-left: -20px;
-  }
-    .project-box {
-    margin-left: 5%;
-    padding-left: 50px;
-    width: 80%;
-    /*padding: 20px;*/
-  }
-
-@media screen and (min-width: 321px) or (max-width: 549px) {
-  /* comes into effect for screens between 321 and 549 pixels (inclusive) */
+/* ==========================================
+   Tablet Breakpoint (321px - 549px)
+   ========================================== */
+@media screen and (min-width: 321px) and (max-width: 549px) {
   .navbar {
     display: grid;
-    grid-template:  40% / 35% 45% 10% 10% ;
+    grid-template: 40% / 35% 45% 10% 10%;
     padding-top: 4%;
     font-size: 65%;
-
-
   }
-
-    .c2a {
+  .c2a {
     font-size: 100%;
-}
+  }
   #nav-title {
     font-size: 120%;
   }
   #nav-work, #nav-bio, #nav-contact, #nav-resume {
     font-size: 70%;
-      padding-left: 20%;
+    padding-left: 20%;
   }
   .head-pic {
     width: 140px;
-
-
   }
-  #main-grid {
-    display: flex;
-    flex-direction: column;
-    margin-top: 8%;
-
 }
-  }
 
-  h3 {
-    /*font-size: 100%;*/
-    text-align: center; 
-    margin-bottom: 2%;
-  }
-  .header>h3 {
-    width: 70%;
-  }
-  .header>h4 {
-    width: 70%;
-  }
-  .project-box {
-    margin-left: 5%;
-    padding-left: 5%;
-
-  }
-  .project-box>h2 {
-    font-size: 90%;
-    margin-right: 20%;
-  }
-  .project-box>ul>li {
-    font-size: 70%;
-    text-align: left;
-  }
-  .bio>* {
-    width: 75%;
-    padding-top: 1.5%;
-    margin: auto;
-    font-size: 90%; 
-  }
-  .bio-list {
-    display: flex;
-    flex-direction: row;
-  }
-  .bio-list>* {
-    font-size: 70%;
-    margin-left: -4%;
-    text-align: center;
-  }
-  .clipart {
-    width: 40%;
-
-  }
-  .showcase {
-    width: 100%;
-  }
-
+/* ==========================================
+   Desktop Breakpoint (>= 550px)
+   ========================================== */
 @media screen and (min-width: 550px) {
-  /* comes into effect for screens larger than or equal to 481 pixels */
-  #main-grid {
-    display: grid;
-    grid-template: 80% / 400px 400px;
-
-      align-self: center;
-      justify-self: center;
-
-  }
-
   .navbar {
     font-size: 20px;
-    /*display: grid;*/
-    /* grid-template:  10% / 40% 40% 5% 5%; */
-    /* padding: 20px 0 20px 0; */
-    /*  justify-content: center;*/
-    /*align-items: center;*/
-
     left: 0;
     top: 0;
     width: 100%;
-      /*margin-bottom: 10px;*/
   }
 
   #nav-title {
@@ -248,53 +122,35 @@ margin: 20px;
   .head-pic {
     width: 70%;
   }
-  h3 {
-    font-size: 10px;
-    text-align: center;
-    margin-bottom: 2%;
-  }
-
-  .headline {
-    margin-bottom: 2%;
-  }
-  .header>h1 {
+  .header > h1 {
     font-size: 340%;
   }
-  .header>h3 {
+  .header > h3 {
     text-align: center;
     width: 70%;
     font-size: 17px;
   }
-  .header>h4 {
+  .header > h4 {
     text-align: center;
     width: 70%;
     font-size: 110%;
   }
-  .project-box>h2 {
+  .project-box > h2 {
     font-size: 110%;
     margin-right: 20%;
   }
-  .project-box>ul>li {
+  .project-box > ul > li {
     font-size: 100%;
     text-align: left;
   }
-  .bio>* {
+  .bio {
     width: 50%;
     margin: auto;
     font-size: 110%;
-    
   }
-
   .bio-list {
     display: flex;
     flex-direction: row;
-
-  }
-  .bio-list>* {
-    font-size: 90%;
-
-      text-align: center;
-
   }
   .year {
     font-size: 140%;
@@ -303,37 +159,60 @@ margin: 20px;
   .showcase {
     width: 50%;
     border-radius: 1%;
-      margin: auto;
+    margin: auto;
   }
   .clipart {
     width: 10%;
-
     margin: 0 !important;
   }
 }
+
+/* ==========================================
+   Base Layout & Component Styles
+   ========================================== */
+h3 {
+  font-size: 10px;
+  text-align: center;
+  margin: auto;
+  margin-bottom: 2%;
+  width: 60%;
+}
+
+.header {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.headline {
+  margin: 20px;
+}
+
+#idcard {
+  padding: 10px;
+  width: 80%;
+  border-radius: 5%;
+  margin: auto;
+}
+
+h4 {
+  font-size: 100%;
+  text-align: center;
+  margin: auto;
+  margin-bottom: 2%;
+  width: 70%;
+}
+
 .navbar {
-    /*background-color: #333333;*/
-    /*  background-color: rgb(16 112 255 / 0.51);*/
-
-
-    background: rgba(15, 23, 42, 0.6);
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(255,255,255,0.08);
-
-
-    /*display: grid;*/
-    /*!* gap: 15px; *!*/
-    /*padding: 0;*/
-    /*margin-bottom: 10px;*/
-    /*justify-content: center;*/
-    /*align-items: center;*/
-    /*left: 0;*/
-    /*top: 0;*/
-    /*width: 100%;*/
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
 }
 
 .showcase {
-    margin-top: 10%;
+  margin-top: 10%;
 }
 
 .blink {
@@ -341,91 +220,66 @@ margin: 20px;
 }
 
 @keyframes blink {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
 }
 
-
-
 .button-grid {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
 }
 
 a {
-    text-decoration: none;
-    color: #ffffff;
-    max-width: 200px;
-    /* border-radius: 3%; */
-    transition: 0.3s;
-    padding: 10px;
-    margin:0;
-    text-align: center;
-    text-justify: auto;
+  text-decoration: none;
+  color: #ffffff;
+  max-width: 200px;
+  transition: 0.3s;
+  padding: 10px;
+  margin: 0;
+  text-align: center;
 }
 
-a:not(#nav-title):hover{
-    background-color: #83838369;
-    transition: 0.3s;
-    /* padding: 5px; */
-
+a:not(#nav-title):hover {
+  background-color: #83838369;
+  transition: 0.3s;
 }
 
-
-.navbar>img {
-    grid-column: 1;
+.navbar > img {
+  grid-column: 1;
 }
 
 .main_grid {
-        justify-items: center;
-    align-items: center;
-    margin: auto;
+  justify-items: center;
+  align-items: center;
+  margin: auto;
 }
+
 #nav-work {
-    grid-column: 3;
-    /*font-size: 80%;*/
+  grid-column: 3;
 }
 
 #nav-bio {
-    grid-column: 4;
-    /*font-size: 80%;*/
-}
-
-.header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-    margin-top: 40px;
+  grid-column: 4;
 }
 
 .footer {
-    background-color: #333333;
+  background-color: #333333;
   position: fixed;
   left: 0;
   bottom: 0;
   width: 100%;
   color: white;
   text-align: center;
-
 }
 
 .head-pic {
   display: flex;
   margin: auto;
-
   border-radius: 50%;
-  /* border: 4px inset #22fff0; */
   max-width: 150px;
 }
 
@@ -433,32 +287,36 @@ a:not(#nav-title):hover{
   margin-bottom: 10%;
 }
 
-
-
 .blue {
   color: #5daee1;
 }
 
 hr {
   border-top: 1px dashed #0098f6af;
-    border-right: none;
-    border-left: none;
-    border-bottom: none;
-    margin: 2px;
+  border-right: none;
+  border-left: none;
+  border-bottom: none;
+  margin: 2px;
 }
 
-#name {
-  margin: 0;
-}
-#email {
+#name, #email {
   margin: 0;
 }
 
-.bio>h1 {
-    /* background-color: #333333; */
-    margin: auto;
-    width: 50%;
-    margin-top: 10px;
+.bio {
+  width: 75%;
+  padding-top: 1%;
+  margin: auto;
+  font-size: 90%;
+}
+
+.bio > h1 {
+  margin: auto;
+  width: 50%;
+  margin-top: 10px;
+  border-bottom: 2px solid #333;
+  padding-bottom: 2px;
+  font-size: 150%;
 }
 
 .centered {
@@ -469,54 +327,41 @@ hr {
   text-align: center;
 }
 
-.hor-align
-{
+.hor-align {
   flex-direction: row;
 }
 
-.vert-align
-{
+.vert-align {
   flex-direction: column;
 }
 
-
-.vert-button>button {
-  /* padding: 0 10% 0 10% ; */
+.vert-button > button {
   height: 40px;
   margin-top: 10px;
-
-
 }
 
 .card-img-top {
-    height: 180px;
+  height: 180px;
   margin-top: 10px;
   margin: auto;
-    max-width: 400px;
-    object-fit: cover;
-    object-position: center;
+  max-width: 400px;
+  object-fit: cover;
+  object-position: center;
 }
 
 .col-md-6 {
   margin-top: 10px;
-
-}
-
-
-.vert-button>button:hover {
-  /* padding: 0 22% 0 22% */
 }
 
 button {
   background-color: #3b82f6;
   border: none;
   padding: 4px;
-  /*color: white;*/
   min-width: 61.66px;
   transition: 0.3s;
   border-radius: 2px;
   margin-top: 10px;
-
+  color: white;
 }
 
 button:hover {
@@ -527,104 +372,93 @@ button:hover {
 }
 
 .project-card {
-    background-color: rgba(17, 24, 39, 0.6);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    backdrop-filter: blur(10px);
-    border-radius: 12px;
-    transition: all 0.2s ease-in-out;
+  background-color: rgba(17, 24, 39, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  transition: all 0.2s ease-in-out;
+  width: 100%;
+  max-width: 600px;
 }
 
 .project-card:hover {
-    transform: translateY(-6px);
-    border-color: rgba(59, 130, 246, 0.4);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  transform: translateY(-6px);
+  border-color: rgba(59, 130, 246, 0.4);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
 }
 
 .tech-badge {
-    display: inline-block;
-    padding: 4px 10px;
-    margin: 2px;
-    font-size: 12px;
-    border-radius: 999px;
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    color: #cbd5e1;
-    background: rgba(255, 255, 255, 0.03);
+  display: inline-block;
+  padding: 4px 10px;
+  margin: 2px;
+  font-size: 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #cbd5e1;
+  background: rgba(255, 255, 255, 0.03);
 }
 
 .project-card img {
-    border-top-left-radius: 12px;
-    border-top-right-radius: 12px;
-    object-fit: cover;
-    height: 180px;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  object-fit: cover;
+  height: 180px;
+  width: 100%;
 }
 
 .skills-container {
-    display: flex;
-    justify-content: space-between; /* Spreads columns evenly */
-    align-items: start;
-    gap: 20px;                     /* Space between columns */
-    padding: 20px;
-    flex-wrap: wrap;               /* Allows wrapping on mobile */
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 20px;
+  padding: 20px;
+  flex-wrap: wrap;
 }
 
 .skill-column {
-    flex: 1;                       /* Makes all columns equal width */
-    min-width: 200px;              /* Prevents columns from getting too squished */
-    /* background-color: #0098f6af;    Optional: Light background for contrast */
-    padding: 5px;
-    /* border-radius: px; */
+  flex: 1;
+  min-width: 200px;
+  padding: 5px;
 }
 
 .skill-column h3 {
-    border-bottom: 2px solid #333;
-    padding-bottom: 10px;
-    margin-top: 0;
-}
-
-.bio>h1 {
-      border-bottom: 2px solid #333;
-      padding-bottom: 2px;
-      font-size: 150%;
+  border-bottom: 2px solid #333;
+  padding-bottom: 10px;
+  margin-top: 0;
 }
 
 .skill-column ul {
-    list-style-type: none;         /* Removes default bullets */
-    padding: 0;
+  list-style-type: none;
+  padding: 0;
 }
 
 .skill-column li {
-    margin-bottom: 8px;
+  margin-bottom: 8px;
 }
-
-/* .resume {
-  width: 80%;
-  filter: invert(0.88)
-} */
 
 /* Portfolio */
 .project-box {
-  /*width: 100%;*/
-  /*border-left: 1px solid #22fff0;*/
   border-radius: 1%;
   display: grid;
-  /*grid-template: 30% 70% / 60% 90%;*/
   background-color: #0b0b0b77;
-  padding: 10px;
+  padding: 15px;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
 }
-
 
 .year {
-    /* font-size: 100%; */
-    margin-top: 10px;
-
+  margin-top: 10px;
+  padding-right: 30px;
 }
-.project-box>h2 {
+
+.project-box > h2 {
   grid-column: 1;
   grid-row: 1;
   text-align: center;
+  font-size: 90%;
+  margin-right: 20px;
 }
-
-
 
 .button-row {
   display: flex;
@@ -635,65 +469,47 @@ button:hover {
   grid-row: 1;
   margin: auto;
   gap: 5%;
+}
 
-}
 .resume-frame {
-    width: 100%;
-    height: calc(100vh - 180px);
-    border: none;
+  width: 100%;
+  border: none;
 }
-.button-row>img {
+
+.button-row > img {
   margin: auto;
   width: 15%;
   margin-top: 5%;
 }
 
-.project-box>h3 {
+.project-box > h3 {
   grid-column: 1;
   grid-row: 2;
   margin: auto;
 }
 
-
-
-a {
-    text-decoration: none;
-    color: inherit;
-}
-.project-box>ul {
+.project-box > ul {
   grid-column: 2;
   grid-row: 2;
+}
+
+.project-box > ul > li {
+  font-size: 70%;
+  text-align: left;
 }
 
 .bio-list {
   display: flex;
   justify-content: center;
-    padding-bottom: 20px;
-
-
-width: 100%;
-
-
-  /* background-color: #0098f6af; */
-
+  padding-bottom: 20px;
+  width: 100%;
+  flex-direction: row;
 }
-
-
 
 #idcard {
-    /* background-color: #333333; */
   border-radius: 5%;
-    width: 70%;
-margin: auto;
-}
-
-
-
-.showcase {
-  /* border: #45aba4af solid 2px ; */
-  padding: 0;
-  margin-top: 2%;
-
+  width: 70%;
+  margin: auto;
 }
 
 span {
@@ -704,149 +520,58 @@ span {
   text-align: center;
 }
 
-.year {
-  padding-right: 30px;
-}
-
 #three-row {
- display: flex;
-    flex-direction: row;
-    width: 100%;
-    /* background-color: #333333; */
-}
-
-.bio-list{
-     display: flex;
-    flex-direction: row;
-    width: 100%;
-}
-#main {
-    width: 100%;
-
+  display: flex;
+  flex-direction: row;
+  width: 100%;
 }
 
 .skill-column {
-    padding: 20px;
-    background: rgba(17, 24, 39, 0.4);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 12px;
-    backdrop-filter: blur(8px);
-    transition: 0.2s ease;
+  padding: 20px;
+  background: rgba(17, 24, 39, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  backdrop-filter: blur(8px);
+  transition: 0.2s ease;
 }
 
 .skill-column:hover {
-    transform: translateY(-4px);
-    border-color: rgba(59, 130, 246, 0.4);
+  transform: translateY(-4px);
+  border-color: rgba(59, 130, 246, 0.4);
 }
 
 .skill-column ul li {
-    margin-bottom: 6px;
-    color: #cbd5e1;
+  margin-bottom: 6px;
+  color: #cbd5e1;
 }
 
-
-
-/* Fonts:   */
-/*.titillium-web-extralight {*/
-/*font-family: "Titillium Web", sans-serif;*/
-/*font-weight: 200;*/
-/*font-style: normal;*/
-/*}*/
-
-/*.titillium-web-light {*/
-/*font-family: "Titillium Web", sans-serif;*/
-/*font-weight: 300;*/
-/*font-style: normal;*/
-/*}*/
-
-/*.titillium-web-regular {*/
-/*font-family: "Titillium Web", sans-serif;*/
-/*font-weight: 400;*/
-/*font-style: normal;*/
-/*}*/
-
-/*.titillium-web-semibold {*/
-/*font-family: "Titillium Web", sans-serif;*/
-/*font-weight: 600;*/
-/*font-style: normal;*/
-/*}*/
-
-/*.titillium-web-bold {*/
-/*font-family: "Titillium Web", sans-serif;*/
-/*font-weight: 700;*/
-/*font-style: normal;*/
-/*}*/
-
-/*.titillium-web-black {*/
-/*font-family: "Titillium Web", sans-serif;*/
-/*font-weight: 900;*/
-/*font-style: normal;*/
-/*}*/
-
-/*.titillium-web-extralight-italic {*/
-/*font-family: "Titillium Web", sans-serif;*/
-/*font-weight: 200;*/
-/*font-style: italic;*/
-/*}*/
-
-/*.titillium-web-light-italic {*/
-/*font-family: "Titillium Web", sans-serif;*/
-/*font-weight: 300;*/
-/*font-style: italic;*/
-/*}*/
-
-/*.titillium-web-regular-italic {*/
-/*font-family: "Titillium Web", sans-serif;*/
-/*font-weight: 400;*/
-/*font-style: italic;*/
-/*}*/
-
-/*.titillium-web-semibold-italic {*/
-/*font-family: "Titillium Web", sans-serif;*/
-/*font-weight: 600;*/
-/*font-style: italic;*/
-/*}*/
-
-/*.titillium-web-bold-italic {*/
-/*font-family: "Titillium Web", sans-serif;*/
-/*font-weight: 700;*/
-/*font-style: italic;*/
-/*}*/
-
-/* Accent color */
+/* Variables & Custom Elements */
 :root {
     --accent: #3b82f6;
 }
 
-/* Card */
 .contact-card {
     background: rgba(255, 255, 255, 0.03);
     border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 14px;
-
     padding: 18px 22px;
-
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
     position: relative;
 }
 
-/* subtle highlight layer */
 .contact-card::before {
     content: "";
     position: absolute;
     inset: 0;
-
     background: linear-gradient(
         135deg,
         rgba(59, 130, 246, 0.08),
         transparent 60%
     );
-
     pointer-events: none;
     border-radius: inherit;
 }
 
-/* Section divider */
 .contact-row {
     padding: 14px 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.06);
@@ -856,44 +581,33 @@ span {
     border-bottom: none;
 }
 
-/* Labels */
 .label {
     font-size: 0.7rem;
     text-transform: uppercase;
     letter-spacing: 0.14em;
-
     color: rgba(255, 255, 255, 0.35);
     margin-bottom: 4px;
 }
 
-/* Links (default state) */
 .contact-row a {
     color: #e5e7eb;
     text-decoration: none;
     font-size: 1rem;
-
     transition: 0.18s ease;
 }
 
-/* Hover = BLUE accent */
 .contact-row a:hover {
     color: var(--accent);
     transform: translateX(3px);
-}
-
-/* Optional subtle glow on hover (very light) */
-.contact-row a:hover {
     text-shadow: 0 0 10px rgba(59, 130, 246, 0.25);
 }
 
-/* Footer */
 .contact-footer {
     margin-top: 14px;
     font-size: 0.85rem;
     color: rgba(255, 255, 255, 0.35);
 }
 
-/* Title accent (optional but nice) */
 .contact-title {
     font-size: 2rem;
     font-weight: 600;
@@ -914,5 +628,4 @@ span {
 
 .underline {
     text-decoration: underline;
-
 }
